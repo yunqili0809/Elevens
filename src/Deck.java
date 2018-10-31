@@ -36,7 +36,7 @@ public class Deck {
                 cards.add(new Card(ranks[j], suitString, values[j]));
                 }
             }
-            this.size= cards.size();
+            shuffle();
 	}
         
 
@@ -64,6 +64,12 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		for(int i=cards.size()-1;i>0;i--) {
+			int pos = (int)(Math.random()*(i));
+			Card temp = cards.get(pos);
+			 cards.set(pos,cards.get(i));
+			 cards.set(i,temp); 
+		}
 	}
 
 	/**

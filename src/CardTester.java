@@ -15,13 +15,16 @@ public class CardTester {
 		System.out.println("Card 1 suit:" + one.suit());
 		System.out.println("Card 1 rank:" + one.rank());
 		System.out.println("Card 1 point:" + one.pointValue());
+		assert one.pointValue()==1:"Card one value incorrect.";
 	//card 2	
 		System.out.println("---Card 2 Tests----");
-		Card two = new Card("ace", "spade",1);
+		Card two = new Card("ace", "spade",1
+				);
 		System.out.println("Card 2 suit:" + two.suit());
 		System.out.println("Card 2 rank:" + two.rank());
 		System.out.println("Card 2 point:" + two.pointValue());
 		System.out.println("Card 1 matches Card 2:" + one.matches(two ));
+		assert one.matches(two):"Card don't match.";
 		//card3
 		System.out.println("---Card 3 Tests----");
 		Card three = new Card("oh","ha",2);
